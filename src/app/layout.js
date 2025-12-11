@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { ThemeProvider } from '@/components/ThemeContext';
+import ArchiveBanner from '@/components/ArchiveBanner';
 export { metadata };
 
 export default function RootLayout({ children }) {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className="flex flex-col min-h-screen bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
         <ThemeProvider>
+          <ArchiveBanner />
           <Header themeToggle={<ThemeToggle />} />
           <main className="flex-grow">{children}</main>
           <Footer />
